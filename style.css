@@ -1,16 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Raleway:wght@300;700&display=swap');
+
 * {
       padding: 0;
       margin: 0;
+      font-family: 'Poppins' , sans-serif ;
+      border: 0;
 }
+hr {
+      border: 1px solid black;
+}
+body {
+      background-color: #ffe3dea8;
+}
+
 .header {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
-      background-color: #0a043c;
+      background: linear-gradient(45deg,#201775 ,#130c52);
       z-index: -5;
 }
+
 .header p {
       margin: 1rem;
       color: #ffe3de;
@@ -30,11 +42,27 @@
       border-radius: 0.5rem;
       font-size: 1.2rem;
       color: #ffe3de;
-      cursor: pointer;
       transition: all 0.5s ease-in;
       font-weight: 600;
+
+      /* disabling text highlighting
+      -webkit-touch-callout: none;  
+    -webkit-user-select: none; 
+     -khtml-user-select: none;
+       -moz-user-select: none; 
+        -ms-user-select: none; 
+            user-select: none; 
+      */
 }
 
+.header nav ul li a {
+      text-decoration: none;
+      color: inherit;
+}
+.header nav ul li:active {
+      transition: all 0.3s;
+      transform: scale(0.85); 
+}
 .header nav ul li:hover {
       color: #0a043c;
       background-color: #ffe3de;
@@ -59,18 +87,29 @@
       left: -50%;
       width: 200%;
       height: 200%;
-      background-color: #a3ddcbab;
-      z-index: -1;
+      background: linear-gradient(45deg,#25a8db , #5fe6bb );
+      z-index: -5;
 }
+
 .container .left-col .bio {
       display: flex;
       align-items: center;
 }
 .container .left-col .bio * {
-      margin: 1.4rem 0.4rem;
+      margin: 0.4rem 0.4rem;
+}
+.container .left-col .bio img {
+      margin: 1rem 0.4rem 0.4rem 0.6rem;
+      border-radius: 0.4rem;
+}
+
+.bio + .profile {
+      width: 80%;
+      margin-left: 10%;
 }
 .container .left-col hr {
       width: 80%;
+      margin-top: 1rem;
       position: relative;
       left: 50%;
       transform: translateX(-50%);
@@ -82,14 +121,17 @@
       align-items: center;
       margin: 1rem 0;
 }
-
 .container .left-col .online-profile .profile {
       margin: 0.6rem;
       width:80%;
+      font-family: 'Raleway' , sans-serif;
+      font-weight: 300;
 }
 .container .left-col .online-profile .profile img {
       border-radius: 50%;
 }
+
+
 .container .left-col .online-profile .profile > span {
       position: relative;
       bottom: 1rem;
@@ -97,76 +139,69 @@
 }
 .container .right-col {
       flex-basis: 70%;
+      margin-right: 5%;
+      margin-top: 1rem;
 }
-/* 
-.header p{
-      float: left;
-      padding: 25px;
+
+.container .right-col .attendance {
+      border-radius: 1rem;
+      margin-bottom: 2%;
+      padding: 1rem;
+      border: 2px solid #a3ddcbab;
 }
-nav ul {
-      float: right;
-      position: relative;
+
+.subject-wise {
+      display: flex;
 }
-nav ul li{
-      display: inline-block;
-      list-style-type: none;
-      padding: 20px;
-      border: 1px solid #666666;
-      border-radius: 10px;
-      position: relative;
-      bottom: -20px;
-      margin-left: 40px;
-      
+.subject-wise div {
+      margin: 1% 3%;
 }
-hr {
-      clear: both;
-}
-img {
-      margin: 10px;
-}
-.left-col {
-      position: relative;
-      width: 20%;
-      border-right: 1px solid #666666;
-      height: 89vh;
-      float: left;
-}
-.name {
-      position: absolute;
-      top: 60px;
-      transform: translateY(-50%);
-}
-.online-profile img {
+.subject-wise div span {
+      border: 2px solid black;
       border-radius: 50%;
+      padding: 10px;
 }
-.profile {
-      position: relative;
+.attn-hr {
+      width: 90%;
+      height: 2px;
+      background-color: #000;
+      border-radius: 1rem;
 }
-.profile span {
-      position: absolute;
-      top: 35%;
+
+table {
+      width: 100%;
+      border-collapse: collapse;
 }
-.online-profile h3 {
-      text-align: center;
+
+table, th, td {
+  border: 1px solid black;
+  text-align: center;
 }
-.right-col {
-      float: right;
-      width: 79%;
-      overflow: hidden;
+
+.announcements {
+      margin-top: 1rem;
 }
-.right-col p {
-      padding: 25px;
+table th {
+      background-color: #03506f !important;
+      color: white;
+      font-family: Raleway;
 }
-.right-col hr {
-      width: 80%;
-      position: absolute;
-      transform: translateX(-13px);
+table tr:nth-of-type(even) {
+      background-color: #a3ddcbab;
 }
-.space {
-      height: 250px;
+
+table tr:nth-of-type(odd) {
+      background-color: #ffe3de;
 }
-.line {
-      width: 150px;
-      border: 1px solid #666666;
-      margin-top: 15px;
-} */
+
+
+
+
+
+
+
+
+
+
+
+

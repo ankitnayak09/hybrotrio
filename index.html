@@ -12,11 +12,11 @@
       <p>University Logo</p>
       <nav>
         <ul>
-          <li>Home</li>
-          <li>Time Table</li>
-          <li>Examination</li>
-          <li>Change Password</li>
-          <li>Logout</li>
+          <li><a href="#">Home</a></li>
+          <li><a href="tt">Time Table</a></li>
+          <li><a href="exam">Examination</a></li>
+          <li><a href="pswd">Change Password</a></li>
+          <li><a href="login.html">Logout</a></li>
         </ul>
       </nav>
     </div>
@@ -27,27 +27,36 @@
     <div class="container">
       <div class="left-col">
         <div class="bio">
-          <img src="" width="75px" height="75px" />
+          <img src="images/user-1.jpg" width="75px" height="75px" />
           <span class="name">Ankit Kumar Nayak</span>
+        </div>
+        <div class="profile">
+            <p>Section : K20EN</p>
+            <p>Roll Number : RK20ENA27</p>
+           <p>Regd. No. : 12002849</p>
         </div>
         <hr />
         <div class="online-profile">
           <h3>Online</h3>
           <div class="profile">
-            <img src="user-2.png" width="20%" />
+            <img src="images/user-2.png" width="20%" />
+            <span class="onl9"></span>
             <span>Manan Agrawal</span>
           </div>
           <div class="profile">
-            <img src="user-3.png" width="20%" />
+            <img src="images/user-3.png" width="20%" />
+            <span class="onl9"></span>
             <span>Nishtha Gaur</span>
           </div>
           <div class="profile">
-            <img src="user-2.png" width="20%" />
-            <span>Manan Agrawal</span>
+            <img src="images/user-4.jpg" width="20%" />
+            <span class="onl9"></span>
+            <span>Nitin Agrawal</span>
           </div>
           <div class="profile">
-            <img src="user-3.png" width="20%" />
-            <span>Nishtha Gaur</span>
+            <img src="images/user-5.jpg" width="20%" />
+            <span class="onl9"></span>
+            <span>Qwerty Qaws</span>
           </div>
         </div>
       </div>
@@ -55,19 +64,57 @@
     <!--  -----------------Right col ------------------ --> 
       <div class="right-col">
         <div class="attendance">
-          <p>Attendance View</p>
+        <div>
+          <h2>Attendance Status</h2>
+          <hr class="attn-hr">
+          <h4>Subject Wise</h4>
+          <div class="subject-wise">
+            <div class="cse202"><span>90%</span><br>CSE202</div>
+            <div class="cse326"><span>100%</span><br>CSE326</div>
+            <div class="ece213"><span>100%</span><br>ECE213</div>
+            <div class="phy109"><span>100%</span><br>PHY109</div>
+            <div class="cse106"><span>100%</span><br>CSE106</div>
+            <div class="mth117"><span>100%</span><br>MTH117</div>
+            <div class="pel110"><span>100%</span><br>PEL110</div>
+          </div>
+          </div>
         </div>
         <hr>
-        <div class="subject">
-              <p class="sub">Subject Wise View</p>
-              <hr>
-        </div>
         <div class="time-table">
               <h3 style="text-align: center;">Today's Time Table</h3>
-              <hr>
+              <table>
+                <thead>
+                  <th>Time</th>
+                  <th>Courses</th>
+                  <th>Platform</th>
+                  <th>Att. Status</th>
+                </thead>
+                <tr>
+                  <td>10-11 AM</td>
+                  <td>PEL130</td>
+                  <td>MyClass</td>
+                  <td>Present</td>
+                </tr>
+                <tr>
+                  <td>12-01 PM</td>
+                  <td>PHY109</td>
+                  <td>Microsoft Teams</td>
+                  <td>Absent</td>
+                </tr>
+                <tr>
+                  <td>01-02 PM</td>
+                  <td>MTH166</td>
+                  <td>Google Meet</td>
+                  <td>Absent</td>
+                </tr>
+                <tr>
+                  <td>03-05 PM</td>
+                  <td>MEC103</td>
+                  <td>Big Blue Button</td>
+                  <td>Absent</td>
+                </tr>
+              </table>
         </div>
-        <div class="space"></div>
-        <hr>
         <div class="announcements">
               <h3>Announcements</h3>
               <div class="line"></div>
