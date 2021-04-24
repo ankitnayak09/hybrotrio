@@ -5,6 +5,7 @@
       margin: 0;
       font-family: 'Poppins' , sans-serif ;
       border: 0;
+      box-sizing: border-box;
 }
 hr {
       border: 1px solid black;
@@ -14,18 +15,29 @@ body {
 }
 
 .header {
+      position: fixed;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
       background: linear-gradient(45deg,#201775 ,#130c52);
-      z-index: -5;
+      z-index: 100;
+      height: 10vh;
+      width: 100vw;
+      box-shadow: 0px 3px 10px 0px rgba(30,21,111,0.71);
 }
-
-.header p {
-      margin: 1rem;
+.header .logo {
+      padding: 0;
+      margin: 0;
+      height: 90px;
+      margin-left: 10px;
+}
+.header img {
       color: #ffe3de;
+      height: 90px;
+      width: 90px;
+      cursor: pointer;
 }
 .header nav ul {
       list-style-type: none;
@@ -36,40 +48,34 @@ body {
       display: inline-block;
       margin: 1rem 2rem;
       position: relative;
-      top: 1.5rem;
-      border: 2px solid #ffe3de;
-      padding: 0.6rem;
-      border-radius: 0.5rem;
+      top: 1.2rem;
       font-size: 1.2rem;
       color: #ffe3de;
       transition: all 0.5s ease-in;
       font-weight: 600;
-
-      /* disabling text highlighting
-      -webkit-touch-callout: none;  
-    -webkit-user-select: none; 
-     -khtml-user-select: none;
-       -moz-user-select: none; 
-        -ms-user-select: none; 
-            user-select: none; 
-      */
+      user-select: none;  
 }
 
 .header nav ul li a {
+      padding: 0.6rem;
+      border: 2px solid #ffe3de;
+      border-radius: 0.5rem;
+      width: 100%;
       text-decoration: none;
       color: inherit;
 }
-.header nav ul li:active {
+.header nav ul li a:active {
       transition: all 0.3s;
       transform: scale(0.85); 
 }
-.header nav ul li:hover {
+.header nav ul li a:hover {
       color: #0a043c;
       background-color: #ffe3de;
 }
 .container {
       display: flex;
       justify-content: space-between;
+      margin-top: 10vh;
 }
 .container .left-col {
       flex-basis: 20%;
@@ -79,6 +85,7 @@ body {
       top: 1.5rem;
       left: 0.5rem;
       overflow: hidden;
+      height: 60vh;
 }
 .container .left-col::after {
       position: absolute;
@@ -137,6 +144,11 @@ body {
       bottom: 1rem;
       transform: translateY(-50%);
 }
+
+
+
+
+
 .container .right-col {
       flex-basis: 70%;
       margin-right: 5%;
@@ -156,6 +168,9 @@ body {
 .subject-wise div {
       margin: 1% 3%;
 }
+
+/* progress rings */
+
 .subject-wise div span {
       border: 2px solid black;
       border-radius: 50%;
@@ -178,13 +193,11 @@ table, th, td {
   text-align: center;
 }
 
-.announcements {
-      margin-top: 1rem;
-}
 table th {
       background-color: #03506f !important;
       color: white;
       font-family: Raleway;
+      padding: 1rem;
 }
 table tr:nth-of-type(even) {
       background-color: #a3ddcbab;
@@ -194,9 +207,65 @@ table tr:nth-of-type(odd) {
       background-color: #ffe3de;
 }
 
+table tr:hover {
+      background-color: #201775;
+      color: white;
+}
 
 
+.col-2 {
+      display:flex;
+}
+.announcements {
+      margin-top: 1rem;
+      margin-right: 5%;
+      border: 2px solid #a3ddcbab;
+      border-radius: 0.5rem;
+      width: 70%;
+}
+.announcements h3 {
+      margin: 5px 5px;
+      text-align: center;
+}
+.announcements h3 + hr {
+      width: 90%;
+      height: 2px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 0 auto;
+}
 
+
+.leave {
+      margin-top: 1rem;
+      border: 2px solid #a3ddcbab;
+      border-radius: 0.5rem;
+      width: 25%;
+}
+.leave h3 {
+      margin: 5px 5px;
+      text-align: center;
+}
+.leave h3 + hr {
+      width: 90%;
+      height: 2px;
+      background-color: black;
+      border-radius: 50%;
+      margin: 0 auto;
+}
+.leave .onLeave {
+      width: 90%;
+      margin: 4% auto;
+      text-align: center;
+      border: 1px solid black;
+      border-radius: 1rem;
+}
+
+.leave .onLeave:hover {
+      background-color: #201775;
+      color: white;
+      cursor: not-allowed;
+}
 
 
 
