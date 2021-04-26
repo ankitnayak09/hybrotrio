@@ -201,7 +201,7 @@ body {
 
 /* calendar */
 .cal {
-  width:315px; 
+  width:340px; 
   background:#332f2e; 
   border-radius:5px; 
   overflow:hidden; 
@@ -238,7 +238,6 @@ body {
   width:42px; 
   height:42px; 
   display:inline-block; 
-  float:left; 
   overflow:hidden; 
   line-height:40px;
 }
@@ -248,6 +247,7 @@ body {
       cursor: none;
       font-size: 1.2rem;
       border-radius: 50%;
+      transition: all 0.5s;
 }
 .fade {
       color: #78797a;
@@ -314,4 +314,64 @@ table tr:hover {
       .view-tt {
             flex-basis: 95%;
       }
+}
+
+
+
+/* ----------- Pop-up Form ---------------- */
+.form-popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #1e156fb6;
+      z-index: 9;
+      border-radius: 10%;
+      color: #ffe3de;
+}
+
+.form-container {
+      border-radius: 9%;
+      max-width: 350px;
+      padding: 10%;
+      background-color: #1e156fb6;
+}
+.form-container h2 {
+      margin: 5% 0;
+      color: #ffe3de;
+}
+.form-container input[type=password] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 0.5rem;
+      outline: none;
+}
+
+.form-container input[type=password]:focus {
+      background-color: #ffe3de;
+      color: black;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.8;
+}
+.form-container .butn {
+      background-color: #6be4a1;
+      padding: 10px 10px;
+      border-radius: 0.5rem;
+      margin: 5%;
+      cursor:  pointer;
+}
+.form-container .butn:hover {
+      opacity: 1;
+}
+
+
+.form-container .cancel {
+      background-color: #dc3545;
+      color: white;
 }
