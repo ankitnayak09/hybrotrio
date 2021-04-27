@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,49 +8,184 @@
   <link rel="stylesheet" href="style2.css">
   <title>Examination</title>
 </head>
+
 <body>
-    <!-- -------- Header ----------------- -->
-      <div class="header">
-      <a href="index.html" class="logo"><img src="images/logo.png" alt="HybroTrio"/></a>
-      <nav>
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="time-table.html">Time Table</a></li>
-          <li><a href="exam.html">Examination</a></li>
-          <li><a href="#" onclick="openForm()" id="chngPswd">Change Password</a></li>
-          <li><a href="login.html">Logout</a></li>
-        </ul>
-      </nav>
+  <!-- -------- Header ----------------- -->
+  <div class="header">
+    <a href="index.html" class="logo"><img src="images/logo.png" alt="HybroTrio" /></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="time-table.html">Time Table</a></li>
+        <li><a href="exam.html">Examination</a></li>
+        <li><a href="#" onclick="openForm()" id="chngPswd">Change Password</a></li>
+        <li><a href="login.html">Logout</a></li>
+      </ul>
+    </nav>
+  </div>
+  <!-- ----- Change Password Form ----------------- -->
+  <div class="form-popup" id="myForm">
+    <form id="form-container">
+      <h2>Change Password</h2>
+
+      <label for="crntPswd">Current Password</label>
+      <input type="password" placeholder="Current Password" required>
+
+      <label for="newPswd">New Password</label>
+      <input type="password" placeholder="New Password" required>
+
+      <button type="submit" class="butn">Change Password</button>
+      <button type="submit" class="butn cancel" onclick="closeForm()">Cancel</button>
+    </form>
+  </div>
+  </div>
+
+
+  <!-- --------- container ----------------- -->
+  <div class="container">
+    <div class="left-col">
+      <p class="cgpa">9.8<span>CGPA</span></p>
+      <hr>
+      <div class="marks">
+        <p style="text-align: center;font-weight: bold;">Term 2</p>
+        <p>PEL130 : 95%</p>
+        <p>CSE326 : 95%</p>
+        <p>PHY109 : 95%</p>
+        <p>MEC103 : 95%</p>
+        <br><a href="" class="view-marks">View Marks</a><br><br>
+        <p>Backlog: 2</p>
+        <a href="#" class="reappear">Reappear Registration</a>
+      </div>
     </div>
-    <!-- ----- Change Password Form ----------------- -->
-    <div class="form-popup" id="myForm">
-      <form id="form-container">
-        <h2>Change Password</h2>
-
-        <label for="crntPswd">Current Password</label>
-        <input type="password" placeholder="Current Password" required>
-
-        <label for="newPswd">New Password</label>
-        <input type="password" placeholder="New Password" required>
-
-        <button type="submit" class="butn">Change Password</button>
-        <button type="submit" class="butn cancel" onclick="closeForm()">Cancel</button>
-      </form>
+    <div class="right-col">
+      <table>
+        <caption>Examination Schedule</caption>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Subject</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tr class="phy" onclick="phy()">
+          <td>01 Jun 2021</td>
+          <td>PHY109</td>
+          <td>10:30-12:00</td>
+        </tr>
+        <tr class="PHY109" style="border: none;">
+          <td colspan="3" style="font-weight: bold;">Syllabus:<br>
+            Unit I : Electromagnetic Theory<br>
+            Unit II : Lasers and applications
+            Unit III : Fibre Optics<br>
+            Unit IV : Quantum Mechanics<br>
+            Unit V : Waves<br>
+            Unit VI : Solid State Physics<br>
+          </td>
+        </tr>
+        <tr class="mec" onclick="mec()">
+          <td>03 Jun 2021</td>
+          <td>MEC103</td>
+          <td>10:30-12:00</td>
+        </tr>
+        <tr class="MEC103" style="border: none;">
+          <td colspan="3" style="font-weight: bold;">Syllabus:<br>
+            Unit I : Introduction to Engineering Drawing<br>
+            Unit II : Projection of Points and Lines<br>
+            Unit III : Orthographic Projections<br>
+            Unit IV : Sectional views <br>
+            Unit V : Isometric Projections<br>
+            Unit VI : Development of Surfaces<br>
+          </td>
+        </tr>
+        <tr class="mth" onclick="mth()">
+          <td>19 May 2021</td>
+          <td>MTH166</td>
+          <td>10:30-12:00</td>
+        </tr>
+        <tr class="MTH166" style="border: none;">
+          <td colspan="3" style="font-weight: bold;border: none;">Syllabus:<br>
+            Unit I : Ordinary differential equations<br>
+            Unit II : Differential equations of higher order<br>
+            Unit III : Linear differential equation<br>
+            Unit IV : Partial differential equation<br>
+            Unit V : Vector calculus I<br>
+            Unit VI : Vector calculus II<br>
+          </td>
+        </tr>
+        <tr class="pel" onclick="pel()">
+          <td>24 May 2021</td>
+          <td>PEL130</td>
+          <td>10:30-12:00</td>
+        </tr>
+        <tr class="PEL130" style="border: none;">
+          <td colspan="3" style="font-weight: bold">Syllabus:<br>
+            Unit I : Parts of Speech<br>
+            Unit II : Articles, Determiners and Quantifiers<br>
+            Unit III : Tenses and Conditionals<br>
+            Unit IV : Sentences and Clauses<br>
+            Unit V : Modals and Punctuation<br>
+            Unit VI : Vocabulary<br>
+          </td>
+        </tr>
+      </table>
     </div>
-    </div>
+  </div>
 
+  <footer>
+    <p>Developed By <a>Manan Kumar Agrawal</a>, <a>Nishtha Gaur</a> & <a
+        href="https://www.linkedin.com/in/ankit-nayak9/">Ankit Kumar Nayak</a></p>
+  </footer>
 
+  <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.querySelector('.container').style.filter = "blur(10px)";
+    }
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.querySelector('.container').style.filter = "blur(0px)";
+    }
 
-    
-    <script>
-      function openForm() {
-        document.getElementById("myForm").style.display = "block";
-        document.querySelector('.container').style.filter ="blur(10px)";
+    function phy() {
+      let phy = document.querySelector('.PHY109');
+      if (phy.style.display == "inline-block") {
+        phy.style.display = "none";
       }
-      function closeForm() {
-        document.getElementById("myForm").style.display = "none";
-        document.querySelector('.container').style.filter ="blur(0px)";
+      else {
+        phy.style.display = "inline-block";
       }
-    </script>
+    }
+
+    function mec() {
+      let mec = document.querySelector('.MEC103');
+      if (mec.style.display == "inline-block") {
+        mec.style.display = "none";
+      }
+      else {
+        mec.style.display = "inline-block";
+      }
+    }
+
+    function mth() {
+      let mth = document.querySelector('.MTH166');
+      if (mth.style.display == "inline-block") {
+        mth.style.display = "none";
+      }
+      else {
+        mth.style.display = "inline-block";
+      }
+    }
+
+    function pel() {
+      let pel = document.querySelector('.PEL130');
+      if (pel.style.display == "inline-block") {
+        pel.style.display = "none";
+      }
+      else {
+        pel.style.display = "inline-block";
+      }
+    }
+  </script>
 </body>
+
 </html>

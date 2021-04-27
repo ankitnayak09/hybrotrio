@@ -212,13 +212,14 @@ body {
 
 .header {
       position: fixed;
+      top: 0;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
       overflow: hidden;
       background: linear-gradient(45deg,#201775 ,#130c52);
-      z-index: 100;
+      z-index: 5;
       height: 10vh;
       width: 100vw;
       box-shadow: 0px 3px 10px 0px rgba(30,21,111,0.71);
@@ -362,15 +363,28 @@ td:nth-child(1) {
       text-align: left;
       padding-left: 2%;
 }
+td:nth-child(2) {
+      text-align: center;
+      padding-left: 2%;
+}
 td:nth-child(3) {
       text-align: right;
       padding-right: 2%;
 }
-tr:nth-child(even) {
+tr:nth-child(1) {
       background-color: #a3ddcbab;
 }
-tr:nth-child(odd) {
+tr:nth-child(3) {
       background-color: #ffe3de;
+}
+tr:nth-child(5) {
+      background-color: #a3ddcbab;
+}
+tr:nth-child(7) {
+      background-color: #ffe3de;
+}
+tr:nth-child(even){
+      background-color: #63c1e6dc;
 }
 table tr:hover {
       background-color: #201775;
@@ -378,14 +392,154 @@ table tr:hover {
 }
 
 
+/* ------------- Pop-up Form ---------------- */
+.form-popup {
+      display: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #1e156fb6;
+      z-index: 9;
+      border-radius: 10%;
+      color: #ffe3de;
+}
+
+.form-container {
+      border-radius: 9%;
+      max-width: 350px;
+      padding: 10%;
+      background-color: #1e156fb6;
+}
+
+.form-container input[type=text] {
+      width: 100%;
+      padding: 15px;
+      margin: 5px 0 22px 0;
+      border: none;
+      background: #f1f1f1;
+      border-radius: 0.5rem;
+      outline: none;
+}
+
+.form-container input[type=text]:focus {
+      background-color: #ffe3de;
+      color: black;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      opacity: 0.8;
+}
+.form-container .butn {
+      background-color: #6be4a1;
+      padding: 10px 10px;
+      border-radius: 0.5rem;
+      margin: 5%;
+      cursor:  pointer;
+}
+.form-container .butn:hover {
+      opacity: 1;
+}
 
 
+.form-container .cancel {
+      margin-left: 30%;
+      background-color: #dc3545;
+      color: white;
+}
 
-@media only screen and (max-width:800px) {
-      .cal {
-            display: none;
-      }
-      .view-tt {
-            flex-basis: 95%;
-      }
+
+/* ------------examination--------------- */
+
+.container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      margin-top: 10vh;
+}
+
+.container .left-col {
+      flex-basis: 20%;
+      border: 2px solid #a3ddcbab;
+      border-radius: 1rem;
+      position: relative;
+      top: 1.5rem;
+      left: 0.5rem;
+      overflow: hidden;
+      height: 60vh;
+}
+.container .left-col::after {
+      position: absolute;
+      content: '';
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: linear-gradient(45deg,#25a8db , #5fe6bb );
+      z-index: -5;
+}
+.container .left-col .cgpa {
+      font-size:36px;
+      text-align: center;
+      margin: auto;
+      position: relative;
+}
+
+.container .left-col>p span{
+      font-size: 14px;
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+}
+.container .left-col hr {
+      width: 80%;
+      color: black;
+      border: 1px solid black;
+      border-radius: 50%;
+      margin: 5% auto;
+}
+.container .left-col .marks {
+      margin: 10% 10%;
+
+}
+.view-marks {
+      text-decoration: none;
+      border: 1px solid black;
+      background-color: #1d156e;
+      color: white;
+      padding: 1%;
+      border-radius: 0.4rem;
+}
+.reappear {
+      animation: blink 1s linear infinite;
+      border: 1px solid black;
+      background-color: #1d156e;
+      color: white;
+      padding: 1%;
+      border-radius: 0.4rem;
+}
+@keyframes blink {
+      0%{color: white;}
+      50%{color: red;}
+}
+.container .right-col {
+      flex-basis: 70%;
+      margin-right: 5%;
+      margin-top: 1rem;
+}
+table caption {
+      font-size: 24px;
+      font-weight: bold;
+}
+td {
+      width: 30%;
+      cursor: pointer;
+      user-select: none;
+}
+.PHY109 {
+      display: none;
+}
+.MEC103 {
+      display: none;
 }
