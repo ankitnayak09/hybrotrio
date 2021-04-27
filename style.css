@@ -272,14 +272,25 @@ table tr:hover {
       border-radius: 0.5rem;
       width: 70%;
 }
-.announcements .card {
+.announcements .card1 {
       border: 1px solid black;
       border-radius: 0.5rem;
       width: 95%;
       margin: 0 auto;
       margin-top: 1%;
       padding: 1% 1%;
+      position: relative;
 }
+
+.announcements .card1::before {
+      content: '';
+      position: absolute;
+      background-image: url(images/card-1.jpg);
+      top: 0;
+      left: 0;
+
+}
+
 .announcements h3 {
       margin: 5px 5px;
       text-align: center;

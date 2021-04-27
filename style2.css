@@ -192,6 +192,17 @@ form input:focus-within + p {
   color: #0a043c;
 }
 
+.forgot {
+      position: relative;
+      top: 3%;
+      left: 22%;
+      opacity: 0.6;
+      font-size: 0.8rem;
+}
+.forgot:hover {
+      opacity: 1;
+      cursor: pointer;
+}
 
 /* Time Table */
 
