@@ -157,29 +157,47 @@
             <h3>Announcements</h3>
             <hr />
             <div class="option">
-              <span class="btn active">All</span>
-              <span class="btn">Exam</span>
-              <span class="btn">Placement</span>
-              <span class="btn">Administrative/Misc</span>
-              <span class="btn">Co-Curricular/Sports/Cultural</span>
+              <span class="btn active every" onclick="every()">All</span>
+              <span class="btn exam" onclick="exam()">Exam</span>
+              <span class="btn placement" onclick="placement()">Placement</span>
+              <span class="btn admin" onclick="admin()">Administrative/Misc</span>
+              <span class="btn sports" onclick="sports()">Co-Curricular/Sports/Cultural</span>
             </div>
-            <div class="card1 card">
+            <div class="card1 card exam1">
               LPU among the only three Indian Universities ranked ‘Top 200 in the World’ in Times Higher Education Impact Rankings 2021
             </div>
-            <div class="card2 card">
+            <div class="card2 card sports1">
               LPU MBA student won two Medals at International Shooting Sports Federation World Cup
             </div>
-            <div class="card3 card">
+            <div class="card3 card sports1">
               Experience the Exhilarating Odyssey of LPU’s School of Hotel Management and Tourism
             </div>
-            <div class="card4 card">
+            <div class="card4 card sports1">
               LPU Verto to be honored with Visionary Leader Award by ISIEINDIA in June 2021
             </div>
-            <div class="card5 card">
+            <div class="card5 card admin1">
               Union HRD Minister inaugurated three top events at LPU
             </div>
-            <div class="card1 card">
+            <div class="card6 card admin1">
               LPU among the only three Indian Universities ranked ‘Top 200 in the World’ in Times Higher Education Impact Rankings 2021.
+            </div>
+            <div class="card7 card sports1">
+              LPU Badminton Player to participate in 31st World University Games 2021 in China.
+            </div>
+            <div class="card8 card sports1">
+              LPU Students won 7 Medals at 29th Senior National Wushu Championship 2021
+            </div>
+            <div class="card9 card sports1">
+              70 International Expo Stalls at LPU’s ‘ONE WORLD 2019’ Fest
+            </div>
+            <div class="card10 card sports1">
+              Grand Opening Ceremony of Youth Vibe 2021
+            </div>
+            <div class="card11 card sports1">
+              Grooving To The Beats Of Diversity At 10th ONE WORLD 2019
+            </div>
+            <div class="card12 card placement1">
+             LPU Placements Knocks Covid-19 Blues
             </div>
           </div>
           <div class="leave">
@@ -189,10 +207,7 @@
               <p>John Doe : CSE202</p>
             </div>
             <div class="onLeave">
-              <p>Sukh-E : Music</p>
-            </div>
-            <div class="onLeave">
-              <p>Sparsh : Nothing</p>
+              <p>Dr. Gurpal Singh : PEL130</p>
             </div>
           </div>
         </div>
@@ -200,7 +215,7 @@
     </div>
 
     <footer>
-      <p>Developed By <a href="https://www.linkedin.com/in/manan-aggarwal-b13214180/">Manan Kumar Agrawal</a>, <a>Nishtha Gaur</a> & <a href="https://www.linkedin.com/in/ankit-nayak9/">Ankit Kumar Nayak</a></p>
+      <p>Developed By <a href="https://www.linkedin.com/in/manan-aggarwal-b13214180/">Manan Kumar Agrawal</a>, <a href="https://www.linkedin.com/in/nishtha-gaur-5a942b1b6">Nishtha Gaur</a> & <a href="https://www.linkedin.com/in/ankit-nayak9/">Ankit Kumar Nayak</a></p>
     </footer>
 
     <script>
@@ -211,6 +226,67 @@
       function closeForm() {
         document.getElementById("myForm").style.display = "none";
         document.querySelector('.container').style.filter ="blur(0px)";
+      }
+
+      function every(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.every');
+        console.log(btn);
+        btn.forEach(remove);
+        main.classList.add('active');
+        let disp = document.querySelectorAll('.card');
+        disp.forEach(show);
+      }
+      function exam(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.exam');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.exam1');
+        disp.forEach(show);
+      }
+      function placement(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.placement');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.placement1');
+        disp.forEach(show);
+      }
+      function admin(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.admin');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.admin1');
+        disp.forEach(show);
+      }
+      function sports(){
+        let btn = document.querySelectorAll('.btn');
+        let main = document.querySelector('.sports');
+        btn.forEach(remove);
+        main.classList.add('active');
+        let card = document.querySelectorAll('.card');
+        card.forEach(hide);
+        let disp = document.querySelectorAll('.sports1');
+        disp.forEach(show);
+      }
+
+      function remove(btn){
+        btn.classList.remove('active');
+      }
+
+      function hide(card) {
+        card.style.display = "none";
+      }
+      function show(disp){
+        disp.style.display ="block";
       }
     </script>
   </body>

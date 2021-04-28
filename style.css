@@ -187,27 +187,11 @@ circle {
       stroke: #03506f;
 }
 
-/* .percent circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 75) / 100);
-  stroke: gold;
-  animation: percent 1.5s linear;
-  animation-delay: 1s;
-} */
-
-/* .percent circle:nth-child(2) {
-  stroke-dashoffset: calc(440 - (440 * 33) / 100);
-  stroke: salmon;
-  animation: percent 1.8s linear;
-  animation-delay: 1.2s;
-} */
-
 .number {
   position: absolute;
   top: 45%;
   left:35%;
   transform: translate(-50%, -50%);
- /* bottom: 190px;
-  right: -50px;  */
   color: #c1e1d4;
 }
 
@@ -302,17 +286,49 @@ table tr:hover {
       background-image: url(images/card-5.jpg);
       color: white;
 }
+.announcements .card7 {
+      background-image: url(images/card-7.jpg);
+      color: white;
+}
+.announcements .card8 {
+      background-image: url(images/card-8.jpg);
+      color: white;
+}
+.announcements .card9 {
+      background-image: url(images/card-9.jpg);
+      color: white;
+}
+.announcements .card10 {
+      background-image: url(images/card-10.jpg);
+      color: white;
+}
+.announcements .card11 {
+      background-image: url(images/card-11.jpg);
+      color: white;
+}
+.announcements .card12 {
+      background-image: url(images/card-12.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      color: black;
+}
 
 .announcements h3 {
       margin: 5px 5px;
       text-align: center;
 }
+/* .announcements .btn {
+
+} */
 .announcements .btn.active {
       background-color: #03506f;
       opacity: 1;
+      position: relative;
+      z-index: 100;
 }
 .announcements .option {
       margin-top: 1%;
+      user-select: none;
 }
 .announcements .btn {
       margin-left: 2% !important;
