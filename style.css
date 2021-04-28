@@ -85,7 +85,7 @@ body {
       top: 1.5rem;
       left: 0.5rem;
       overflow: hidden;
-      height: 60vh;
+      height: 60%;
 }
 .container .left-col::after {
       position: absolute;
@@ -129,16 +129,11 @@ body {
       margin: 1rem 0;
 }
 .container .left-col .online-profile .profile {
-      margin: 0.6rem;
+      margin: 0.2rem 0.6rem;
       width:80%;
       font-family: 'Raleway' , sans-serif;
       font-weight: 300;
 }
-.container .left-col .online-profile .profile img {
-      border-radius: 50%;
-}
-
-
 .container .left-col .online-profile .profile > span {
       position: relative;
       bottom: 1rem;
