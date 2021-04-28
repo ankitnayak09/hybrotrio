@@ -38,6 +38,23 @@
       <button type="submit" class="butn cancel" onclick="closeForm()">Cancel</button>
     </form>
   </div>
+  <!-- </div> -->
+  <!-- //// Reappear Registration ///// -->
+  <div class="form-popup" id="reappearForm">
+    <form id="form-container">
+      <h2>Enter Your Details</h2>
+
+      <input type="password" placeholder="Registration No." required style="background: blueviolet;">
+
+      <select name="" id="" style="width: 100%;border-radius: 1rem;margin-bottom: 5%;">
+        <option value="" selected disabled>Choose Subject</option>
+        <option value="">MEC103</option>
+      </select>
+      <input type="password" placeholder="Roll No." required style="background: blueviolet;">
+
+      <button type="submit" class="butn" style="margin-left: 20%;">Register</button>
+      <button type="submit" class="butn cancel" onclick="closeReappear()">Cancel</button>
+    </form>
   </div>
 
 
@@ -51,10 +68,10 @@
         <p>PEL130 : 95%</p>
         <p>CSE326 : 95%</p>
         <p>PHY109 : 95%</p>
-        <p>MEC103 : 95%</p>
+        <p>MEC103 : 35%</p>
         <br><a href="" class="view-marks">View Marks</a><br><br>
-        <p>Backlog: 2</p>
-        <a href="#" class="reappear">Reappear Registration</a>
+        <p>Backlog: 1</p>
+        <a href="#" class="reappear" onclick="reappear()">Reappear Registration</a>
       </div>
     </div>
     <div class="right-col">
@@ -132,7 +149,7 @@
   </div>
 
   <footer>
-    <p>Developed By <a>Manan Kumar Agrawal</a>, <a>Nishtha Gaur</a> & <a
+    <p>Developed By <a href="https://www.linkedin.com/in/manan-aggarwal-b13214180/">Manan Kumar Agrawal</a>, <a>Nishtha Gaur</a> & <a
         href="https://www.linkedin.com/in/ankit-nayak9/">Ankit Kumar Nayak</a></p>
   </footer>
 
@@ -145,44 +162,51 @@
       document.getElementById("myForm").style.display = "none";
       document.querySelector('.container').style.filter = "blur(0px)";
     }
-
+    function reappear(){
+      document.getElementById("reappearForm").style.display = "block";
+      document.querySelector('.container').style.filter = "blur(10px)";
+    }
+    function closeReappear() {
+      document.getElementById("reappearForm").style.display = "none";
+      document.querySelector('.container').style.filter = "blur(0px)";
+    }
     function phy() {
       let phy = document.querySelector('.PHY109');
-      if (phy.style.display == "inline-block") {
+      if (phy.style.display == "table-row") {
         phy.style.display = "none";
       }
       else {
-        phy.style.display = "inline-block";
+        phy.style.display = "table-row";
       }
     }
 
     function mec() {
       let mec = document.querySelector('.MEC103');
-      if (mec.style.display == "inline-block") {
+      if (mec.style.display == "table-row") {
         mec.style.display = "none";
       }
       else {
-        mec.style.display = "inline-block";
+        mec.style.display = "table-row";
       }
     }
 
     function mth() {
       let mth = document.querySelector('.MTH166');
-      if (mth.style.display == "inline-block") {
+      if (mth.style.display == "table-row") {
         mth.style.display = "none";
       }
       else {
-        mth.style.display = "inline-block";
+        mth.style.display = "table-row";
       }
     }
 
     function pel() {
       let pel = document.querySelector('.PEL130');
-      if (pel.style.display == "inline-block") {
+      if (pel.style.display == "table-row") {
         pel.style.display = "none";
       }
       else {
-        pel.style.display = "inline-block";
+        pel.style.display = "table-row";
       }
     }
   </script>

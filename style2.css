@@ -371,31 +371,28 @@ td:nth-child(3) {
       text-align: right;
       padding-right: 2%;
 }
-tr:nth-child(1) {
+tr:nth-child(even) {
       background-color: #a3ddcbab;
 }
-tr:nth-child(3) {
+tr:nth-child(odd) {
       background-color: #ffe3de;
-}
-tr:nth-child(5) {
-      background-color: #a3ddcbab;
-}
-tr:nth-child(7) {
-      background-color: #ffe3de;
-}
-tr:nth-child(even){
-      background-color: #63c1e6dc;
 }
 table tr:hover {
       background-color: #201775;
       color: white;
+}
+.right-col tr:nth-child(1),.right-col tr:nth-child(4),.right-col tr:nth-child(5)    {
+      background-color: #a3ddcbab;
+}
+.right-col tr:nth-child(2),.right-col tr:nth-child(4),.right-col tr:nth-child(6),.right-col tr:nth-child(8) {
+      background-color: #25a7dbad;
 }
 
 
 /* ------------- Pop-up Form ---------------- */
 .form-popup {
       display: none;
-      position: absolute;
+      position: fixed;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -456,6 +453,7 @@ table tr:hover {
       flex-wrap: wrap;
       justify-content: space-around;
       margin-top: 10vh;
+      margin-bottom: 25vh;
 }
 
 .container .left-col {
@@ -528,6 +526,20 @@ table tr:hover {
       margin-right: 5%;
       margin-top: 1rem;
 }
+
+.PHY109 {
+      display: none;
+}
+.MEC103 {
+      display: none;
+}
+.MTH166 {
+      display: none;
+
+}
+.PEL130 {
+      display: none;
+}
 table caption {
       font-size: 24px;
       font-weight: bold;
@@ -537,9 +549,24 @@ td {
       cursor: pointer;
       user-select: none;
 }
-.PHY109 {
-      display: none;
+
+/* -------- footer -------------- */
+
+footer {
+      width: 100%;
+      height: 5vh;
+      margin-top: 20px;
+      font-size: 14px;
+      text-align: center;
+      color: rgba(0, 0, 0, 0.6);
+      font: "Poppins";
 }
-.MEC103 {
-      display: none;
+footer a {
+      text-decoration: none;
+      color: rgba(0, 0, 0, 0.6);
+}
+footer a:hover {
+      text-decoration: underline;
+      color: rgba(0, 0, 0, 1);
+      cursor: pointer;
 }
