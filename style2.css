@@ -404,8 +404,8 @@ table tr:hover {
 
 .form-container {
       border-radius: 9%;
-      max-width: 350px;
       padding: 10%;
+      width: 100%;
       background-color: #1e156fb6;
 }
 
@@ -444,8 +444,42 @@ table tr:hover {
       background-color: #dc3545;
       color: white;
 }
+#viewMarks .form-container {
+      width: 500px;
+      overflow: hidden;
 
+}
+div.term {
+      border: 1px solid black;
+      border-radius: 0.4rem;
+      background: #ffe3de;
+      color: black;
+      padding-left: 10px;
+      width: 100%;
+      cursor: pointer;
+      background-color: #6bbddf;
+}
+table.term-1-tab , td{
+      width: 100%;
+      border: 1px solid black;
+}
+table.term-1-tab tr{
+      color: black;
+}
+table.term-2-tab {
+      width: 100%;
+}
+table.term-2-tab tr{
+      color: black;
+      border: none;
+}
 
+.term-1-tab {
+      display: none;
+}
+.term-2-tab {
+      display: none;
+}
 /* ------------examination--------------- */
 
 .container {
